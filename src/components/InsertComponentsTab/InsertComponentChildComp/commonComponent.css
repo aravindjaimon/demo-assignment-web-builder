@@ -1,0 +1,37 @@
+.section_img{
+    object-fit: cover;
+    width: 214px;
+    height: 105px;
+}
+.navigation_section_img_footer{
+    object-fit: cover;
+    width: 240px;
+    height: 96px;
+}
+.navigation_section_img_topbar{
+    object-fit: contain;
+    width: 234px;
+    height: 46px;
+}
+.pages_section_img{
+    object-fit: fill;
+    width: 240px;
+    height: 300px;
+}
+.media_section_img{
+    object-fit: fill;
+    width: 111px;
+    height: 113px;
+}
+.grid_wrapper{
+    display: grid;
+    width: 90%;
+    grid-gap: 10px;
+    grid-template-columns: 1fr 1fr;
+    margin: auto;
+}
+.section_label{
+    font-size: 14px;
+    font-weight: 500;
+    color: #938b80;
+}
