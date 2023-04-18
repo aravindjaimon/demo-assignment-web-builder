@@ -1,11 +1,12 @@
 import React, { useCallback, useEffect, } from 'react'
-import { SideBarList } from '../../Constants'
 import { RIGHT_VECTOR } from '../../Assets/Images'
-import "./insertcomponent.css"
+import { SideBarList } from '../../Constants'
 import useInsertComponent from '../../Context/InserComponent/useInsertComponent'
+import "./insertcomponent.css"
 
 const InsertComponentsTab = () => {
     const { Selectedid, setSelectedid } = useInsertComponent();
+    
     useEffect(() => {
         let getData;
         getData = setTimeout(() => {
@@ -13,6 +14,7 @@ const InsertComponentsTab = () => {
         }, 200);
         return () => clearTimeout(getData);
     }, [Selectedid]);
+    
     const mouseOverCallback = useCallback((id) => {
         setSelectedid(id)
     }, [setSelectedid])

@@ -1,14 +1,13 @@
-import React, { useEffect, useState } from 'react'
-import RightSideBar from './RightSideBar'
-import { useParams } from 'react-router-dom'
 import axios from 'axios'
+import React, { useEffect, useState } from 'react'
+import { useParams } from 'react-router-dom'
+import useInsertComponent from '../Context/InserComponent/useInsertComponent'
 import { API_HOST } from '../api_utils'
 import geditorConfig from '../api_utils/geditor_config'
-import useInsertComponent from '../Context/InserComponent/useInsertComponent'
+import RightSideBar from './RightSideBar'
 
 const GrapeJsEditor = () => {
-    const { SelectedTab, setSelectedTab } = useInsertComponent()
-    const [editor, setEditor] = useState(null)
+    const { SelectedTab, setSelectedTab,setEditor } = useInsertComponent()
     const [assets, setAssets] = useState([])
     const { pageId } = useParams()
     useEffect(() => {
